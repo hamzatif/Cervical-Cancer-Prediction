@@ -20,4 +20,4 @@ Step 6 was to separate my target feature from the rest of my dataframe, and then
 
 Step 7 was to create and train an XGBoost Classifier on my datasets.
 
-## Results: The XGBoost Classifier achieved a 96% accuracy on predicting the training data, and achieved a 97% accuracy on predicting the testing data.
+## Results: The XGBoost Classifier achieved a 96% accuracy on predicting cervical cancer in the training data, and achieved a 97% accuracy on predicting cervical cancer in the testing data.
