@@ -1,23 +1,41 @@
-# About my cervical cancer prediction project
+# Cervical Cancer Prediction Project
 
-I imported the proper libraries:
-* pandas
-* numpy
-* seaborn
-* matplotlib
+## Overview
 
-Step 1 was to do some EDA after importing my CSV file into a dataframe, by checking the data types of my features. I saw that a lot of my features were of the wrong data type, and I wanted to change that to ensure a smoother process for data analysis. I first needed to get rid of my missing values before I could change data types.
+This project analyzes and predicts cervical cancer risk factors using a dataset collected from "Hospital Universitario de Caracas" in Caracas, Venezuela. The goal is to identify key drivers of cervical cancer and develop predictive models to assist in early detection and prevention efforts.
 
-Step 2 was to handle missing values. I tackled this issue by replacing all '?' with a NaN, so that I could visualize all my missing data based on that. I created a heatmap of my dataset based on how many NaNs each feature contained, and this showed me that 2 features were almost entirely missing. The best course of action was to drop them from my dataset, so that is what I did.
+The project involves data preprocessing, exploratory data analysis (EDA), and predictive modeling to extract insights and create actionable outcomes.
 
-Step 3 was to complete what I started in my 1st step, which was to change all my data types to numeric so that I could properly calculate the statistics of the dataframe.
+## Features
 
-Step 4 was to use the describe() function to calculate the mean of each feature, which I then used to replace the NaNs of each feature. Now I had no missing values, and a complete dataset.
+- **Dataset**: Contains 858 samples with 36 attributes, including demographic, reproductive, lifestyle, and medical history information.
+- **Model**: XGBoost classifier
+- **Evaluation Metrics**: Accuracy
 
-Step 5 was to create some visualizations to analyze the correlations between my features, and to analyze the distribution of those features as well. 
+## Model and Results
 
-Step 6 was to separate my target feature from the rest of my dataframe, and then scale it to ensure my model would not be biased by any of the features. I also split my data into training and testing data.
+The **XGBoost classifier** was trained on the dataset and achieved the following results:
 
-Step 7 was to create and train an XGBoost Classifier on my datasets.
+- **Training Accuracy**: 96%
+- **Testing Accuracy**: 97%
 
-## Results: The XGBoost Classifier achieved a 96% accuracy on predicting cervical cancer in the training data, and achieved a 97% accuracy on predicting cervical cancer in the testing data.
+### Best Model
+
+The **XGBoost classifier** demonstrated strong performance, achieving **96% accuracy on training data** and **97% accuracy on testing data**. Its ability to handle complex relationships between features makes it the most suitable model for predicting cervical cancer risk.
+
+## Applications and Insights
+
+### Key Insights
+
+- **Important Risk Factors**:
+  - Number of pregnancies and age of first sexual intercourse strongly correlate with cancer risk.
+  - Lifestyle factors, such as smoking, and contraceptive usage, also play significant roles.
+
+### Business Applications
+
+1. **Early Detection**:
+   - The predictive model can be integrated into healthcare systems to screen patients and prioritize those at higher risk for further testing.
+2. **Resource Optimization**:
+   - Hospitals can allocate resources more effectively by identifying high-risk individuals.
+3. **Preventive Measures**:
+   - Insights from feature importance analysis can guide public health campaigns to target key modifiable risk factors.
